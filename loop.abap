@@ -79,5 +79,21 @@ loop at lt_headers into data(ls_header) .
     append ls_out to lt_out .
 
   endloop .
+  
+* Gilberto's improviments
+DATA(lt_final) =
+  VALUE tab_out(
+    FOR ls_item IN lt_items
+      FOR ls_header IN lt_headers FROM line_index( lt_headers[ id = ls_item-id ] )
+        WHERE ( id = ls_item-id )
+
+      LET ls_final =
+        VALUE ty_out( id   = ls_header-id
+                      type = ls_header-type
+                      item = ls_item-item
+                      desc = ls_item-desc )
+
+      IN ( CORRESPONDING #( BASE ( ls_final ) ls_item ) ) ) .
+
 
 endloop .
