@@ -29,3 +29,30 @@
                    REDUCE menge_d( INIT lv_menge TYPE menge_d
                                     FOR ls_mat IN GROUP components
                                    NEXT lv_menge = lv_menge + ls_mat-qtd_realizada ) ) ).
+
+[12:03] Renato Lara
+    DATA(lt_inc_cl_group) = VALUE tt_inc_cl_group(
+     FOR GROUPS group OF <fs_inc_class> IN lt_inc_class
+     GROUP BY ( classification_type     = <fs_inc_class>-classification_type
+                classification_category = <fs_inc_class>-classification_category )
+     LET amount = REDUCE #( INIT amount_val TYPE f
+                            FOR <group> IN GROUP group
+                            NEXT amount_val += <group>-amount )
+     IN ( classification_type = group-classification_type
+          classification_category = group-classification_category
+          amount   = amount )
+    ).
+
+[12:04] Renato Lara
+Declaração
+
+[12:05] Renato Lara
+    TYPES:
+      BEGIN OF ty_inc_class,
+        classification_type     TYPE string,
+        classification_category TYPE string,
+        amount                  TYPE f,
+      END OF ty_inc_class,
+      tt_inc_class    TYPE STANDARD TABLE OF ty_inc_class WITH DEFAULT KEY,
+      tt_inc_cl_group TYPE SORTED TABLE OF ty_inc_class WITH UNIQUE KEY classification_type classification_category.     DATA(lt_inc_class) = VALUE tt_inc_class( ).
+
