@@ -30,7 +30,7 @@
                                     FOR ls_mat IN GROUP components
                                    NEXT lv_menge = lv_menge + ls_mat-qtd_realizada ) ) ).
 
-[12:03] Renato Lara
+* Renato Lara
     DATA(lt_inc_cl_group) = VALUE tt_inc_cl_group(
      FOR GROUPS group OF <fs_inc_class> IN lt_inc_class
      GROUP BY ( classification_type     = <fs_inc_class>-classification_type
