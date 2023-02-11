@@ -22,7 +22,6 @@
                                    NEXT lv_menge = lv_menge + ls_mat-qtd_realizada ) ) ).
 
 
-
   method get_qty_received .
 
     if ( is_data is initial ) .
