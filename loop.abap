@@ -97,3 +97,7 @@ DATA(lt_final) =
 
 
 endloop .
+
+* Append quando a tabela ja tem dados
+
+
