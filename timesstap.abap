@@ -10,3 +10,5 @@
     CONVERT DATE date
        INTO TIME STAMP DATA(end_date)
        TIME ZONE space .
+
+*
