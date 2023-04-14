@@ -6,7 +6,6 @@
         ( order ) ) .
 
 
-
     me->gt_componentes = VALUE #(
       FOR GROUPS components OF <fs_mat> IN lt_data
       GROUP BY ( aufnr   = <fs_mat>-aufnr
@@ -32,9 +31,9 @@
 
 * Renato Lara
     DATA(lt_inc_cl_group) = VALUE tt_inc_cl_group(
-     FOR GROUPS group OF <fs_inc_class> IN lt_inc_class
-     GROUP BY ( classification_type     = <fs_inc_class>-classification_type
-                classification_category = <fs_inc_class>-classification_category )
+     FOR GROUPS group OF <fs_inc_class> IN lt_inc_class
+     GROUP BY ( classification_type     = <fs_inc_class>-classification_type
+                classification_category = <fs_inc_class>-classification_category )
      LET amount = REDUCE #( INIT amount_val TYPE f
                             FOR <group> IN GROUP group
                             NEXT amount_val += <group>-amount )
