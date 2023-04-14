@@ -35,15 +35,15 @@
      FOR GROUPS group OF <fs_inc_class> IN lt_inc_class
      GROUP BY ( classification_type     = <fs_inc_class>-classification_type
                 classification_category = <fs_inc_class>-classification_category )
-     LET amount = REDUCE #( INIT amount_val TYPE f
-                            FOR <group> IN GROUP group
-                            NEXT amount_val += <group>-amount )
-     IN ( classification_type = group-classification_type
-          classification_category = group-classification_category
-          amount   = amount )
+     LET amount = REDUCE #( INIT amount_val TYPE f
+                            FOR <group> IN GROUP group
+                            NEXT amount_val += <group>-amount )
+     IN ( classification_type = group-classification_type
+          classification_category = group-classification_category
+          amount = amount )
     ).
 
-    
+
 [12:05] Renato Lara
     TYPES:
       BEGIN OF ty_inc_class,
