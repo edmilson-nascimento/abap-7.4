@@ -1,3 +1,5 @@
+report zgroup .
+
     data(lt_filter) =
       value re_t_aufnr(
         for groups order of line in me->gt_final
