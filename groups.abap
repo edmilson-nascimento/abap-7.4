@@ -53,4 +53,4 @@ report zgroup .
         amount                  TYPE f,
       END OF ty_inc_class,
       tt_inc_class    TYPE STANDARD TABLE OF ty_inc_class WITH DEFAULT KEY,
-      tt_inc_cl_group TYPE SORTED TABLE OF ty_inc_class WITH UNIQUE KEY classification_type classification_category.     DATA(lt_inc_class) = VALUE tt_inc_class( ).
+      tt_inc_cl_group TYPE SORTED TABLE OF ty_inc_class WITH UNIQUE KEY classification_type classification_category.
