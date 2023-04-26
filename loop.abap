@@ -95,7 +95,6 @@ DATA(lt_final) =
 
       IN ( CORRESPONDING #( BASE ( ls_final ) ls_item ) ) ) .
 
-
 endloop .
 
 * Append quando a tabela ja tem dados

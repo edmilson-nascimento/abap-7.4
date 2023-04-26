@@ -44,7 +44,7 @@ report zgroup .
     ).
 
 
-[12:05] Renato Lara
+[12:05] Renato Lara 
     TYPES:
       BEGIN OF ty_inc_class,
         classification_type     TYPE string,
