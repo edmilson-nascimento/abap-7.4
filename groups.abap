@@ -1,4 +1,4 @@
-report zgroup .
+report zgroup.
 
     data(lt_filter) =
       value re_t_aufnr(

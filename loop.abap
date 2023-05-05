@@ -75,7 +75,6 @@ loop at lt_headers into data(ls_header) .
         item = ls_item-item
         desc = ls_item-desc
     ).
-
     append ls_out to lt_out .
 
   endloop .
@@ -115,5 +114,4 @@ result = value soli_tab( base result for l in line_itens...............
   result = value soli_tab(
     base result for l in lines_items ( line = l-tdline ) ) .
 endloop.
-
 
