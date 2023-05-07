@@ -1,8 +1,6 @@
 report y_let .
 
 * Usando a mesma tabela interna para atribior novos dados
-
-
 TYPES:
   BEGIN OF ty_result,
     po    TYPE ekko-ebeln,
