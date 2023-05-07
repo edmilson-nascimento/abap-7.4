@@ -44,12 +44,18 @@ report zgroup.
     ).
 
 
-[12:05] Renato Lara 
-    TYPES:
-      BEGIN OF ty_inc_class,
-        classification_type     TYPE string,
-        classification_category TYPE string,
-        amount                  TYPE f,
-      END OF ty_inc_class,
-      tt_inc_class    TYPE STANDARD TABLE OF ty_inc_class WITH DEFAULT KEY,
-      tt_inc_cl_group TYPE SORTED TABLE OF ty_inc_class WITH UNIQUE KEY classification_type classification_category.
+* [12:05] Renato Lara 
+TYPES:
+  BEGIN OF ty_inc_class,
+    classification_type     TYPE string,
+    classification_category TYPE string,
+    amount                  TYPE f,
+  END OF ty_inc_class,
+  tt_inc_class    TYPE STANDARD TABLE OF ty_inc_class
+                  WITH DEFAULT KEY,
+  tt_inc_cl_group TYPE SORTED TABLE OF ty_inc_class 
+                  WITH UNIQUE KEY classification_type classification_category.
+
+
+
+*
