@@ -1,7 +1,6 @@
 *&---------------------------------------------------------------------*
 REPORT ytest.
 
-
 TYPES:
   BEGIN OF ty_output,
     object        TYPE objnum, "EQUI/LOCINST
