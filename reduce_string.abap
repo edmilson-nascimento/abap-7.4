@@ -72,7 +72,7 @@ LOOP AT gt_output ASSIGNING FIELD-SYMBOL(<fs_output>).
                     WHEN text01 = '' THEN ls_out-class_uc "CONV #( |V { ls_out-class_uc }| )
                     WHEN text01 NS ls_out-class_uc THEN text01 && '|' && ls_out-class_uc  ) ).
 
-  IF lv_class_uc CS '|' OR lv_class_uc IS INITIAL.
+  IF ( lv_class_uc CS '|' OR lv_class_uc IS INITIAL ) .
 
     DATA(lv_class_0038) = REDUCE string(
       INIT text TYPE string
