@@ -21,7 +21,9 @@
                                     FOR ls_mat IN GROUP components
                                    NEXT lv_menge = lv_menge + ls_mat-qtd_realizada ) ) ).
 
-  method get_qty_received .
+
+
+
 
     if ( is_data is initial ) .
       return .
@@ -31,7 +33,7 @@
       from lips
      where charg eq @is_data-charg
        and aufnr eq @is_data-aufnr
-      order by aufnr, charg ascending
+     order by aufnr, charg ascending
       into table @data(lt_data_qty) .
 
     if ( sy-subrc ne 0 ) .
@@ -63,3 +65,4 @@
 *|1870000130|   10|CA00099424|   7 |KG   |11459204|
 *|1870000134|   10|CA00099431|   4 |KG   |11459204|
 *--------------------------------------------------
+
