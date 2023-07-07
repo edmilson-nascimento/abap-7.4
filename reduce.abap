@@ -22,9 +22,6 @@
                                    NEXT lv_menge = lv_menge + ls_mat-qtd_realizada ) ) ).
 
 
-
-
-
     if ( is_data is initial ) .
       return .
     endif .
