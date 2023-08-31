@@ -115,3 +115,38 @@ result = value soli_tab( base result for l in line_itens...............
     base result for l in lines_items ( line = l-tdline ) ) .
 endloop.
 
+method set .
+
+  if ( lines( me->gt_produto_acabado ) eq 0 ) or
+     ( lines( me->gt_componentes )     eq 0 ) .
+    return .
+  endif .
+
+  me->gt_out =
+    value #(
+      for c in me->gt_componentes
+        for p in me->gt_produto_acabado
+          from line_index(
+            me->gt_produto_acabado[ aufnr = c-aufnr ] )
+          where ( aufnr = c-aufnr )
+        " Dados do Produto Acabado
+        let ls_out =
+          value zpps_0009(
+            matnr = p-matnr
+            maktx = p-maktx
+            gmein = p-gmein
+            gamng = p-gamng
+            igmng = p-igmng
+            lmnga = p-lmnga
+            aufnr = p-aufnr
+            auart = p-auart
+            werks = p-werks
+            lgort = p-lgort
+            gltri = p-gltri
+
+            lt_alternativa = p-lt_alternativa
+            versao         = p-versao )
+
+        in ( corresponding #( base ( ls_out ) c ) ) ) .
+
+endmethod .
