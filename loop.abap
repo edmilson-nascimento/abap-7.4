@@ -96,6 +96,7 @@ DATA(lt_final) =
 
 endloop .
 
+
 * Append quando a tabela ja tem dados
 
     data(lines_body) = lines_header .
@@ -108,7 +109,7 @@ loop at ....
 no seu caso aí se você que conservar as linhas que já estavam no "result" você tem que por um BASE result entre o ( e o FOR
 
 [14:24] Renato Lara
-result = value soli_tab( base result for l in line_itens...............
+result = value soli_tab( base result for l in line_itens..............
 
   append lines of lines_items to lines_body .
   result = value soli_tab(
