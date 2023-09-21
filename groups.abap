@@ -1,5 +1,19 @@
 report zgroup.
 
+
+
+data(lt_filter) =
+  " Atribuição do tipo TT_PRPS
+  value tt_prps(
+  " Agrupa a Definição do Projeto na variavel DP
+  for groups DP of ls_data in lt_pstab
+  " Condicao para não retornar valores vazios
+  where ( psphi is not initial )
+  group by ls_data-psphi ascending
+  " Atribuir a variavel
+    ( psphi = DP ) ) .
+
+
     data(lt_filter) =
       value re_t_aufnr(
         for groups order of line in me->gt_final
