@@ -18,6 +18,7 @@ data(lt_filter) =
         group by line-aufnr ascending
         ( order ) ) .
 
+
     me->gt_componentes = VALUE #(
       FOR GROUPS components OF <fs_mat> IN lt_data
       GROUP BY ( aufnr   = <fs_mat>-aufnr
@@ -66,7 +67,6 @@ TYPES:
                   WITH DEFAULT KEY,
   tt_inc_cl_group TYPE SORTED TABLE OF ty_inc_class 
                   WITH UNIQUE KEY classification_type classification_category.
-
 
 
 *

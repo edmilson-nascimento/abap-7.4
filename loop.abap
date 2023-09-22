@@ -151,4 +151,3 @@ method set .
 
         in ( corresponding #( base ( ls_out ) c ) ) ) .
 
-endmethod .
