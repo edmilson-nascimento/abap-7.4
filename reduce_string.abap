@@ -84,3 +84,68 @@ LOOP AT gt_output ASSIGNING FIELD-SYMBOL(<fs_output>).
   ENDIF.
 
 ENDLOOP .
+
+
+IF ( lines( im_equi ) EQ 0 ) .
+  RETURN .
+ENDIF .
+
+me->gt_equi = im_equi .
+
+ENDMETHOD .
+
+METHOD get_data .
+
+CLEAR me->gt_outtab .
+
+IF ( lines( me->gt_equi ) EQ 0 ) .
+  RETURN .
+ENDIF .
+
+SELECT equnr, objnr
+  FROM equi
+  INTO TABLE @DATA(lt_data)
+ WHERE equnr IN @me->gt_equi .
+IF ( sy-subrc NE 0 ) .
+  RETURN .
+ENDIF .
+
+SELECT equnr, spras, eqktx, eqktu
+  FROM eqkt
+  INTO TABLE @me->gt_outtab
+   FOR ALL ENTRIES IN @lt_data
+ WHERE equnr EQ @lt_data-equnr
+   AND spras EQ @sy-langu .
+IF ( sy-subrc NE 0 ) .
+  RETURN .
+ENDIF .
+
+SELECT j~objnr, j~stat, j~inact,
+       t~istat, t~spras, t~txt04
+  FROM jest AS j
+  LEFT JOIN tj02t AS t
+    ON j~stat EQ t~istat
+  INTO TABLE @DATA(lt_status)
+   FOR ALL ENTRIES IN @lt_data
+ WHERE j~objnr EQ @lt_data-objnr
+*      AND j~inact EQ @abap_false
+   AND t~spras EQ @sy-langu .
+
+" Informando status
+LOOP AT lt_data ASSIGNING FIELD-SYMBOL(<fs_data>).
+
+  ASSIGN me->gt_outtab[ equnr = <fs_data>-equnr ] TO FIELD-SYMBOL(<fs_out>) .
+  IF ( <fs_out> IS NOT ASSIGNED ) .
+    CONTINUE .
+  ENDIF .
+
+  <fs_out>-sttxt = REDUCE #( INIT s   type ilom_sttxs
+                                  sep type char03
+                              FOR l IN lt_status
+                            WHERE ( objnr = <fs_data>-objnr )
+                             NEXT s   = s && sep && l-txt04
+                                  sep = '/' ) .
+
+  UNASSIGN <fs_out> .
+
+ENDLOOP .
