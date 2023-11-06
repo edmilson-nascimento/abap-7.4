@@ -55,19 +55,18 @@ cl_demo_output=>write_data( result1 ).
 cl_demo_output=>display( ).
 
 
-        "Get Field Catalog
-        DATA(lt_field_catalog) = zcl_excel_common=>get_fieldcatalog( ip_table = lt_data_export ).
-        lt_data_export = VALUE #(
-          LET lt_temp = lt_data_export
-          IN
-          FOR ls_temp IN lt_temp
-            (  equnr  = ls_temp-equnr
-               sernr  = ls_temp-sernr
-               matnr  = ls_temp-matnr
-               maktx  = ls_temp-maktx
-               anln1  = ls_temp-anln1
-               aufnr  = VALUE #( it_abates[ equnr = |{ ls_temp-equnr ALPHA = IN }| ]-aufnr OPTIONAL )
-               ktext  = VALUE #( it_abates[ equnr = |{ ls_temp-equnr ALPHA = IN }| ]-ktext OPTIONAL )
-           )
-
-        ).
+"Get Field Catalog
+DATA(lt_field_catalog) = zcl_excel_common=>get_fieldcatalog( ip_table = lt_data_export ).
+lt_data_export = VALUE #(
+  LET lt_temp = lt_data_export
+  IN
+  FOR ls_temp IN lt_temp
+    (  equnr  = ls_temp-equnr
+        sernr  = ls_temp-sernr
+        matnr  = ls_temp-matnr
+        maktx  = ls_temp-maktx
+        anln1  = ls_temp-anln1
+        aufnr  = VALUE #( it_abates[ equnr = |{ ls_temp-equnr ALPHA = IN }| ]-aufnr OPTIONAL )
+        ktext  = VALUE #( it_abates[ equnr = |{ ls_temp-equnr ALPHA = IN }| ]-ktext OPTIONAL )
+    )
+).
