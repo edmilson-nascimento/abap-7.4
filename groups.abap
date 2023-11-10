@@ -70,3 +70,15 @@ TYPES:
 
 
 *
+
+t_result = VALUE #( FOR GROUPS group OF ls_source IN it_source
+                     GROUP BY ( so             = ls_source-so
+                                customer       = ls_source-customer
+                                material_group = ls_source-material_group )
+                     ( so             = group-so
+                       customer       = group-customer
+                       material_group = group-material_group
+                       liters         = REDUCE #( INIT lv_liters = 0
+                                                  FOR ls_member IN GROUP group
+                                                  NEXT lv_liters = lv_liters + ls_member-liters ) ) ).
+
