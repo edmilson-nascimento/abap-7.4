@@ -80,3 +80,33 @@ t_result = VALUE #( FOR GROUPS group OF ls_source IN it_source
                                                   FOR ls_member IN GROUP group
                                                   NEXT lv_liters = lv_liters + ls_member-liters ) ) ).
 
+
+                                                  TYPES:
+
+  BEGIN OF type_line,
+    matnr TYPE mara-matnr,
+    charg TYPE mcha-charg,
+  END OF type_line,
+  type_tab TYPE STANDARD TABLE OF type_line
+           WITH DEFAULT KEY .
+
+
+DATA(lt_source) = VALUE type_tab(
+  ( matnr = '20000010' charg = '11M10' )
+  ( matnr = '20000020' charg = '11M20' )
+  ( matnr = '20000010' charg = '11M10' )
+  ( matnr = '20000030' charg = '11M30' )
+  ( matnr = '20000040' charg = '11M40' )
+  ( matnr = '20000010' charg = '11M10' )
+  ( matnr = '20000020' charg = '11M20' )
+).
+
+DATA(lt_result) = VALUE type_tab(
+    FOR GROUPS group OF ls_source IN lt_source
+  GROUP BY ( matnr = ls_source-matnr
+             charg = ls_source-charg ) ASCENDING
+WITHOUT MEMBERS
+           ( matnr = group-matnr
+             charg = group-charg ) ) .
+
+BREAK-POINT .
