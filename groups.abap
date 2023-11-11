@@ -82,7 +82,6 @@ t_result = VALUE #( FOR GROUPS group OF ls_source IN it_source
 
 
 TYPES:
-
   BEGIN OF type_line,
     matnr TYPE mara-matnr,
     charg TYPE mcha-charg,
@@ -109,4 +108,3 @@ WITHOUT MEMBERS
            ( matnr = group-matnr
              charg = group-charg ) ) .
 
-BREAK-POINT .
