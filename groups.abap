@@ -69,8 +69,6 @@ TYPES:
                   WITH UNIQUE KEY classification_type classification_category.
 
 
-*
-
 t_result = VALUE #( FOR GROUPS group OF ls_source IN it_source
                      GROUP BY ( so             = ls_source-so
                                 customer       = ls_source-customer
