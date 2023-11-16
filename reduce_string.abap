@@ -128,7 +128,7 @@ SELECT j~objnr, j~stat, j~inact,
   INTO TABLE @DATA(lt_status)
    FOR ALL ENTRIES IN @lt_data
  WHERE j~objnr EQ @lt_data-objnr
-*      AND j~inact EQ @abap_false
+*  AND j~inact EQ @abap_false
    AND t~spras EQ @sy-langu .
 
 " Informando status
