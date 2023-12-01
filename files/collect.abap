@@ -1,21 +1,5 @@
 REPORT x .
 
-
-
-*----------------------------------------------------------------------*
-* Modifications                                                        *
-*----------------------------------------------------------------------*
-* Date..........: 2023-11-30                                           *
-* Author........: Edmilson N De Jesus - EX135415                       *
-* Tag...........: MOD1 - AST-74032: Sincronismo SITRD para JUMP da     *
-*                        morada das instalações - ID0008 & ID0009      *
-*----------------------------------------------------------------------*
-
-*>>> MOD1 - Begin
-
-*<<< MOD1 - End
-
-
 TYPES:
   BEGIN OF ty_call,
     tabname TYPE dd03l-tabname,
@@ -28,9 +12,8 @@ DATA:
   lt_collect TYPE tab_call,
   lt_reduce  TYPE tab_call.
 
-BREAK-POINT .
 
-SELECT tabname, fieldname, as4local, as4vers,
+  SELECT tabname, fieldname, as4local, as4vers,
        position
   FROM dd03l
   INTO TABLE @DATA(lt_data)
@@ -64,8 +47,3 @@ ENDIF .
 
 
 
-
-
-
-
-BREAK-POINT .
