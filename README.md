@@ -1,6 +1,6 @@
 # ABAP 7.4 / inline #
 ![Static Badge](https://img.shields.io/badge/development-abap-blue)
-![GitHub commit activity (branch)](https://img.shields.io/github/commit-activity/t/edmilson-nascimento/debug)
+![GitHub commit activity (branch)](https://img.shields.io/github/commit-activity/t/edmilson-nascimento/abap-7.4)
 
 
 The are annotations about new features and 'new' ways to do something better. ~~I hope it.~~
