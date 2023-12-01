@@ -1,10 +1,10 @@
 # ABAP 7.4 / inline #
-
-![N|Solid](img/sap-abap.jpeg)
+![Static Badge](https://img.shields.io/badge/development-abap-blue)
 
 The are annotations about new features and 'new' ways to do something better. ~~I hope it.~~
 
 Eu ainda não decidi ao certo se vou colocar isso em ingles ou português ~~e por enquanto estai indo de acordo com meu humor do dia~~.
+
 
 ## Itens listados para processamento ##
 
