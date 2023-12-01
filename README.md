@@ -25,4 +25,18 @@ Aqui um exemplo de como eu não uso ele e aplico outro codigo para mesma finalid
 
 > Na verdade, o intuito inicial é encontrar uma tabela/estrutura que tem todos os três campos que eu usei como filtro e não apenas um deles. Mas é assunto para outro podcast
 
-Segue codigo de como isso foi feito logo abaixo e aqui é possivel ver todo o codigo com as duas versões.
+Segue codigo de como isso foi feito logo abaixo e [aqui](/files/collect.abap) é possivel ver todo o codigo com as duas versões.
+
+´´´abap
+  lt_reduce = VALUE #(
+    FOR GROUPS table OF <line> IN lt_data
+    GROUP BY <line>-tabname
+    ( tabname = table
+      valor   = REDUCE i( INIT i TYPE i
+                           FOR ls_field IN GROUP table
+                          NEXT i = i + 1 ) )
+  ).
+´´´
+
+
+:)
