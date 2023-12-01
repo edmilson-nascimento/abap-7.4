@@ -27,7 +27,7 @@ Aqui um exemplo de como eu não uso ele e aplico outro codigo para mesma finalid
 
 Segue codigo de como isso foi feito logo abaixo e [aqui](/files/collect.abap) é possivel ver todo o codigo com as duas versões.
 
-´´´abap
+```abap
   lt_reduce = VALUE #(
     FOR GROUPS table OF <line> IN lt_data
     GROUP BY <line>-tabname
@@ -36,7 +36,7 @@ Segue codigo de como isso foi feito logo abaixo e [aqui](/files/collect.abap) é
                            FOR ls_field IN GROUP table
                           NEXT i = i + 1 ) )
   ).
-´´´
+```
 
 
 :)
