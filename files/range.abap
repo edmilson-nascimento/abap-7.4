@@ -7,7 +7,6 @@
     return .
   endif .
 
-  break-point .
 
   data(lt_range) =
     value fip_t_vbeln_range(

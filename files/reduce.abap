@@ -42,6 +42,15 @@
                     for  l in lt_data_qty
                     next qty = qty + l-lfimg  ) .
 
+    loop at lt_data into ls_data .
+
+      ls_outtab-total_p = 
+        me->get_total_por_tp_deposito( i_lote        = ls_data-i_lote
+                                       i_tp_deposito = ls_data-tp_deposito
+                                       i_tab_all     = gt_tab_ll ) .
+
+    endloop .
+
 *--------------------------------------------------
 *|VBELN     |POSNR|CHARG     |LFIMG|MEINS|AUFNR   |
 *--------------------------------------------------
