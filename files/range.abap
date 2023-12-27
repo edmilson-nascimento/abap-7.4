@@ -29,7 +29,6 @@
 
           lt_objnr = VALUE #( FOR ls_objrn IN t_equi ( objnr = ls_objrn-objnr ) ).
 
-
   lt_objnr = value #(
     for groups order of ls_objrn in t_equi
       group by ls_objrn-objnr ascending
