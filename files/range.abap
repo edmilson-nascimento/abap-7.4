@@ -38,7 +38,7 @@
           RETURN .
         ENDIF .
     
-* 
+*
     DATA(lr_equipament) = VALUE ranges_equnr(
       FOR GROUPS equipament OF l IN im_ativos
       WHERE ( equnr IS NOT INITIAL )
