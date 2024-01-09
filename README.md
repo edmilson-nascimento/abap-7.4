@@ -12,14 +12,14 @@ Eu ainda não decidi ao certo se vou colocar isso em ingles ou português ~~e po
 
 - [Groups](#usando-collect-mas-com-reduce)
 - [Collect / Reduce](#usando-collect-mas-com-reduce)
-- [Date](#agrupamento-e-atribuição-com-groups)
-- [Groups](#agrupamento-e-atribuição-com-groups)
-- [Let](#agrupamento-e-atribuição-com-groups)
-- [Loop](#agrupamento-e-atribuição-com-groups)
-- [Range](#agrupamento-e-atribuição-com-groups)
-- [Reduce](#agrupamento-e-atribuição-com-groups)
-- [Reduce string](#agrupamento-e-atribuição-com-groups)
-- [Timestap](#agrupamento-e-atribuição-com-groups)
+- [Date](#date)
+- [Groups](#Groups)
+- [Let](#Let)
+- [Loop](#Loop)
+- [Range](#Range)
+- [Reduce](#Reduce)
+- [Reduce string](#reduce-string)
+- [Timestap](#Timestap)
 
 
 ### Agrupamento e atribuição com `groups`
