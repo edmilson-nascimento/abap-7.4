@@ -10,6 +10,7 @@ Eu ainda não decidi ao certo se vou colocar isso em ingles ou português ~~e po
 
 ## Itens listados para processamento ##
 
+- [Groups](#usando-collect-mas-com-reduce)
 - [Collect / Reduce](#usando-collect-mas-com-reduce)
 - [Date](#agrupamento-e-atribuição-com-groups)
 - [Groups](#agrupamento-e-atribuição-com-groups)
@@ -24,10 +25,18 @@ Eu ainda não decidi ao certo se vou colocar isso em ingles ou português ~~e po
 ### Agrupamento e atribuição com `groups`
 Penso que esse seja o comando que eu mais gosto e provavelmente o mais desafiante usar da maneira correta. Detalhes no [file](/files/groups.abap) e uma previa abaixo.
 
-
 ```abap
-
-
+data(lt_filter) =
+  " Atribuição do tipo TT_PRPS
+  value tt_prps(
+  " Agrupa a Definição do Projeto na variavel DP
+  for groups DP of ls_data in lt_pstab
+  " Condicao para não retornar valores vazios
+  where ( psphi is not initial )
+  " Campo que sera agrupado 
+  group by ls_data-psphi ascending
+  " Atribuir a variavel
+    ( psphi = DP ) ) .
 ```
 
 ### Usando `collect`, mas com `reduce` 
