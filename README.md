@@ -22,8 +22,13 @@ Eu ainda não decidi ao certo se vou colocar isso em ingles ou português ~~e po
 
 
 ### Agrupamento e atribuição com `groups`
-Penso que esse seja o comando que eu mais gosto e provavelmente o que eu mais tenho apanhado para usar. Detalhes no [file](/files/groups.abap).
+Penso que esse seja o comando que eu mais gosto e provavelmente o mais desafiante usar da maneira correta. Detalhes no [file](/files/groups.abap) e uma previa abaixo.
 
+
+```abap
+
+
+```
 
 ### Usando `collect`, mas com `reduce` 
 O Consultor SAP ABAP/PO Murilo Borges empre me diz que eu não gosto de usar o comando `collect`. E sim, devido as minhas experiências ruins que eu tive no começo do meu aprendizado com `ABAP` por não saber usar corretamente ~~ou porque alguns lugares usavam isso para finalizadade diferente do que foi criado~~.

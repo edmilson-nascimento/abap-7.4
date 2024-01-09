@@ -6,6 +6,7 @@ data(lt_filter) =
   for groups DP of ls_data in lt_pstab
   " Condicao para não retornar valores vazios
   where ( psphi is not initial )
+  " Campo que sera agrupado 
   group by ls_data-psphi ascending
   " Atribuir a variavel
     ( psphi = DP ) ) .
