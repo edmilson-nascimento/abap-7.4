@@ -20,6 +20,7 @@ Eu ainda não decidi ao certo se vou colocar isso em ingles ou português ~~e po
 - [Reduce](#Reduce)
 - [Reduce string](#reduce-string)
 - [Timestap](#Timestap)
+- [Diferença entre duas tabelas](#Diferenca-entre-duas-tabelas)
 
 
 ### Agrupamento e atribuição com `groups`
