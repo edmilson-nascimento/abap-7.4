@@ -8,8 +8,6 @@ Legend
 - Post F4 - Button to "POST" on the screen that will be the creation of an Inbound Delivery (by `BAPI_GOODSMVT_CREATE` bapi)
 
 
-<br/>
-
 
 ```mermaid
 flowchart TD
