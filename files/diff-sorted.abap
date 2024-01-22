@@ -27,7 +27,6 @@ DATA(lt_knbk2) = VALUE knbk_t(
 *types tt_xknbk type sorted table of ts_knbk ...
 *types tt_yknbk type sorted table of ts_knbk ...
 
-
 DATA(lt_knbk_diff) = VALUE knbk_t(
   FOR ls_knbk IN COND #( WHEN lines( lt_knbk1 ) >= lines( lt_knbk2 ) THEN lt_knbk1 ELSE lt_knbk2 )
     ( LINES OF COND #(
