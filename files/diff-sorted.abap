@@ -35,8 +35,6 @@ DATA(lt_knbk_diff) = VALUE knbk_t(
     ) )
 ).
 
-
 BREAK-POINT .
-
 
 *
