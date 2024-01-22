@@ -18,7 +18,7 @@
     ) .
 
 
-
+***********************************************************************
   lt_range = value #(
     for groups vbeln of wa in lt_data
       group by wa-vbeln ascending
