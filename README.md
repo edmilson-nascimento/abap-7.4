@@ -18,7 +18,7 @@ flowchart TD
     DadosTeste --> Debug(Debug e avaliação de cenários)
     Debug --> CheckAcao{Ação} 
 
-    CheckAcao --> |Haverá impacto?| Debug
+    CheckAcao --> |Haverá impacto?| sim(Sim)
     CheckAcao --> |Não haverá impacto?| Fix(Correção da solução)
 
     Fix --> Finish([Finish])
