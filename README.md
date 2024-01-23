@@ -10,6 +10,20 @@ Eu ainda não decidi ao certo se vou colocar isso em ingles ou português ~~e po
 ## Dica
 Bem, depois de algum tempo, antes de avançar com qualquer ajuste, achei importante deixar um ponto de atenção para se pensar.
 
+```mermaid
+flowchart TD
+    
+    Start((start)) --> DadosTeste[(Cenários de testes)]
+    
+    DadosTeste --> Debug(Debug e avaliação de cenários)
+    Debug --> CheckAcao{Ação} 
+
+    CheckAcao --> |Haverá impacto?| Debug
+    CheckAcao --> |Não haverá impacto?| Fix(Correção da solução)
+
+    Fix --> Finish([Finish])
+```
+
 
 ## Itens listados para processamento ##
 
