@@ -23,7 +23,7 @@ flowchart TD
     
     CheckAcao --> nao((não))
     
-    nao --> Fix(Aplicacar correção)
+    nao --> Fix(Aplicar correção)
 
     Fix --> Finish([Finish])
 ```
