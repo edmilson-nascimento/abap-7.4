@@ -7,6 +7,9 @@ The are annotations about new features and 'new' ways to do something better. ~~
 
 Eu ainda não decidi ao certo se vou colocar isso em ingles ou português ~~e por enquanto estai indo de acordo com meu humor do dia~~.
 
+## Dica
+Bem, depois de algum tempo, antes de avançar com qualquer ajuste, achei importante deixar um ponto de atenção para se pensar.
+
 
 ## Itens listados para processamento ##
 
