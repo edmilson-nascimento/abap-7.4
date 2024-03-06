@@ -110,6 +110,4 @@ A convers
 .
 
 ### Diferenca-entre-duas-tabelas
-.
-
-:)
+TO DO
