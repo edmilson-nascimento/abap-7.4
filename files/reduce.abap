@@ -52,7 +52,12 @@
     endloop .
 
 
-
+    DATA(lv_count) = reduce kwart(
+      init i type kwart
+      for ls_line in zif_psxra_model~mt_desp_incl
+     where ( objnr = ls_line-objnr )
+      next i = i + ls_line-wkg ) .
+      
 *--------------------------------------------------
 *|VBELN     |POSNR|CHARG     |LFIMG|MEINS|AUFNR   |
 *--------------------------------------------------
