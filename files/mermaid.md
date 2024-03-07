@@ -7,8 +7,6 @@ Legend
 - Sort Entries - Sort the entries by Flag Completed ascending and Batches ascending
 - Post F4 - Button to "POST" on the screen that will be the creation of an Inbound Delivery (by `BAPI_GOODSMVT_CREATE` bapi)
 
-
-
 ```mermaid
 flowchart TD
     
