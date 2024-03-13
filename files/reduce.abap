@@ -78,3 +78,9 @@
 *|1870000130|   10|CA00099424|   7 |KG   |11459204|
 *|1870000134|   10|CA00099431|   4 |KG   |11459204|
 *--------------------------------------------------
+
+
+* Agrupamento para totalizador
+DATA(lv_count_materials) = REDUCE I( INIT CNT1 = 0
+FOR GROUPS OF M1 IN me->gt_goodsmvt_item GROUP BY M1-material
+NEXT CNT1 = CNT1 + 1 ).    
