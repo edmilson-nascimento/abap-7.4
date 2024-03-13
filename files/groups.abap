@@ -108,4 +108,3 @@ DATA(lt_result) = VALUE type_tab(
 WITHOUT MEMBERS
            ( matnr = group-matnr
              charg = group-charg ) ) .
-
