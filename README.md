@@ -86,7 +86,7 @@ Segue codigo de como isso foi feito logo abaixo e [aqui](/files/collect.abap) é
 
 
 ### Date
-A convers
+A conversão...
 
 ### Groups
 .

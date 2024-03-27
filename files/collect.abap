@@ -1,4 +1,4 @@
-REPORT x .
+REPORT collect .
 
 TYPES:
   BEGIN OF ty_call,
@@ -11,8 +11,6 @@ DATA:
   ls_collect TYPE ty_call,
   lt_collect TYPE tab_call,
   lt_reduce  TYPE tab_call.
-
-BREAK-POINT .
 
 SELECT tabname, fieldname, as4local, as4vers,
        position
