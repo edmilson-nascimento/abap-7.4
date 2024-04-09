@@ -1,4 +1,3 @@
-  
   BEGIN OF ty_mara,
     matnr TYPE mara-matnr,
     maktx TYPE makt-maktx,
