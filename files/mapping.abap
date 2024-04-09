@@ -5,6 +5,7 @@
     spras TYPE makt-spras,
   END OF ty_mara,
   tab_mara TYPE STANDARD TABLE OF ty_mara WITH DEFAULT KEY,
+
   BEGIN OF ty_material,
     material TYPE mara-matnr,
     maktx    TYPE makt-maktx,
@@ -20,7 +21,6 @@ DATA(lt_source) = VALUE tab_mara( spras = 'PT'
                                     maktx = 'CABO AL/ACO 160 26X2.58/7X2' )
                                   ( matnr = '40007379'
                                     maktx = 'REDES AEREAS DE BT' ) ).
-
 cl_demo_output=>display_data( lt_source ).
 
 
