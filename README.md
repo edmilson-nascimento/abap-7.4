@@ -40,8 +40,9 @@ flowchart TD
 - [Range](#Range)
 - [Reduce](#Reduce)
 - [Reduce string](#reduce-string)
-- [Timestap](#Timestap)
+- [Timestamp](#Timestamp)
 - [Diferença entre duas tabelas](#Diferenca-entre-duas-tabelas)
+- [Mapping](#Mapping)
 
 
 ### Agrupamento e atribuição com `groups`
@@ -111,3 +112,6 @@ A conversão...
 
 ### Diferenca-entre-duas-tabelas
 TO DO
+
+### Mapping
+Mapeamento para quando as tabelas tem campos diferentes.
