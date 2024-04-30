@@ -108,7 +108,7 @@ A conversão de dados tem como exemplo no [file](/files/03-date.abap). Exitem ma
  [file](/files/09-timestamp.abap)
 
 ### Diferenca-entre-duas-tabelas
- [file](/files/groups.abap)
+ [file](/files/10-diff-sorted.abap)
 
 ### Mapping
-Mapeamento para quando as tabelas tem campos diferentes. [file](/files/groups.abap)
+Mapeamento para quando as tabelas tem campos diferentes. [file](/files/11-mapping.abap)
