@@ -46,7 +46,7 @@ flowchart TD
 
 
 ### Agrupamento e atribuição com `groups`
-Penso que esse seja o comando que eu mais gosto e provavelmente o mais desafiante usar da maneira correta. Detalhes no [file](/files/groups.abap) e uma previa abaixo.
+Penso que esse seja o comando que eu mais gosto e provavelmente o mais desafiante usar da maneira correta. Detalhes no [file](/files/01-groups.abap) e uma previa abaixo.
 
 ```abap
 data(lt_filter) =
@@ -72,7 +72,7 @@ Aqui um exemplo de como eu não uso ele e aplico outro codigo para mesma finalid
 
 > Na verdade, o intuito inicial é encontrar uma tabela/estrutura que tem todos os três campos que eu usei como filtro e não apenas um deles. Mas é assunto para outro podcast
 
-Segue codigo de como isso foi feito logo abaixo e [aqui](/files/collect.abap) é possivel ver todo o codigo com as duas versões.
+Segue codigo de como isso foi feito logo abaixo e [aqui](/files/02-collect.abap) é possivel ver todo o codigo com as duas versões.
 
 ```abap
   lt_reduce = VALUE #(
@@ -86,31 +86,29 @@ Segue codigo de como isso foi feito logo abaixo e [aqui](/files/collect.abap) é
 ```
 
 ### Date
-A conversão...
+A conversão de dados tem como exemplo no [file](/files/03-date.abap). Exitem maneiras diferentes de se fazer isso para obter diferentes formatos.
 
-### Groups
-.
 
 ### Let
-.
+ [file](/files/groups.abap)
 
 ### Loop
-.
+ [file](/files/groups.abap)
 
 ### Range
-.
+ [file](/files/groups.abap)
 
 ### Reduce
-.
+ [file](/files/groups.abap)
 
 ### Reduce string
-.
+ [file](/files/groups.abap)
 
 ### Timestap
-.
+ [file](/files/groups.abap)
 
 ### Diferenca-entre-duas-tabelas
-TO DO
+ [file](/files/groups.abap)
 
 ### Mapping
-Mapeamento para quando as tabelas tem campos diferentes.
+Mapeamento para quando as tabelas tem campos diferentes. [file](/files/groups.abap)
