@@ -90,22 +90,22 @@ A conversão de dados tem como exemplo no [file](/files/03-date.abap). Exitem ma
 
 
 ### Let
- [file](/files/groups.abap)
+ [file](/files/04-let.abap)
 
 ### Loop
- [file](/files/groups.abap)
+ [file](/files/05-loop.abap)
 
 ### Range
- [file](/files/groups.abap)
+ [file](/files/06-range.abap)
 
 ### Reduce
- [file](/files/groups.abap)
+ [file](/files/07-reduce.abap)
 
 ### Reduce string
- [file](/files/groups.abap)
+ [file](/files/08-reduce_string.abap)
 
 ### Timestap
- [file](/files/groups.abap)
+ [file](/files/09-timestamp.abap)
 
 ### Diferenca-entre-duas-tabelas
  [file](/files/groups.abap)
