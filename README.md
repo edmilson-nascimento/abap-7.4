@@ -88,7 +88,6 @@ Segue codigo de como isso foi feito logo abaixo e [aqui](/files/02-collect.abap)
 ### Date
 A conversão de dados tem como exemplo no [file](/files/03-date.abap). Exitem maneiras diferentes de se fazer isso para obter diferentes formatos.
 
-
 ### Let
  [file](/files/04-let.abap)
 
