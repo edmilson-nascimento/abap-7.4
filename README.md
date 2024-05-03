@@ -2,7 +2,6 @@
 ![Static Badge](https://img.shields.io/badge/development-abap-blue)
 ![GitHub commit activity (branch)](https://img.shields.io/github/commit-activity/t/edmilson-nascimento/abap-7.4)
 
-
 The are annotations about new features and 'new' ways to do something better. ~~I hope it.~~
 
 Eu ainda não decidi ao certo se vou colocar isso em ingles ou português ~~e por enquanto estai indo de acordo com meu humor do dia~~.
@@ -27,7 +26,6 @@ flowchart TD
 
     Fix --> Finish([Finish])
 ```
-
 
 ## Itens listados para processamento ##
 
