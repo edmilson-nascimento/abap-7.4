@@ -14,17 +14,17 @@ flowchart TD
     
     Start((start)) --> DadosTeste[(Cenários de testes)]
     
-    DadosTeste --> Debug(Debug e avaliação de cenários)
-    Debug --> CheckAcao{Haverá impacto?} 
+    DadosTeste  --> Debug(Debug e avaliação de cenários)
+    Debug       --> CheckAcao{Haverá impacto?} 
 
     CheckAcao --> sim((Sim))
-    sim --> DadosTeste
+    sim       --> DadosTeste
     
     CheckAcao --> nao((não))
     
-    nao --> Fix(Aplicar correção)
+    nao       --> Fix(Aplicar correção)
 
-    Fix --> Finish([Finish])
+    Fix       --> Finish([Finish])
 ```
 
 ## Itens listados para processamento ##
