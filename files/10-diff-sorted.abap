@@ -34,5 +34,3 @@ DATA(lt_knbk_diff) = VALUE knbk_t(
       WHEN lines( lt_knbk2 ) > lines( lt_knbk1 ) AND NOT line_exists( lt_knbk1[ table_line = ls_knbk ] ) THEN VALUE #( ( ls_knbk ) )
     ) )
 ).
-
-BREAK-POINT .
