@@ -28,7 +28,6 @@ flowchart TD
 ```
 
 ## Itens listados para processamento ##
-
 - [Groups](#usando-collect-mas-com-reduce)
 - [Collect / Reduce](#usando-collect-mas-com-reduce)
 - [Date](#date)
@@ -41,7 +40,6 @@ flowchart TD
 - [Timestamp](#Timestamp)
 - [Diferença entre duas tabelas](#Diferenca-entre-duas-tabelas)
 - [Mapping](#Mapping)
-
 
 ### Agrupamento e atribuição com `groups`
 Penso que esse seja o comando que eu mais gosto e provavelmente o mais desafiante usar da maneira correta. Detalhes no [file](/files/01-groups.abap) e uma previa abaixo.
