@@ -90,7 +90,6 @@ TYPES:
   type_tab TYPE STANDARD TABLE OF type_line
            WITH DEFAULT KEY .
 
-
 DATA(lt_source) = VALUE type_tab(
   ( matnr = '20000010' charg = '11M10' )
   ( matnr = '20000020' charg = '11M20' )
