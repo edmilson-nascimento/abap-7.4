@@ -12,7 +12,6 @@
   END OF ty_material,
   tab_material TYPE STANDARD TABLE OF ty_material WITH DEFAULT KEY.
 
-
 DATA(lt_source) = VALUE tab_mara( spras = 'PT'
                                   ( matnr = '10000018'
                                     maktx = 'MOLA PAPEIS METAL 32MM PRETO' )
@@ -25,6 +24,7 @@ cl_demo_output=>display_data( lt_source ).
 
 DATA(lt_target) = CORRESPONDING tab_material( lt_source
                              MAPPING material = matnr ).
+                             
 cl_demo_output=>display_data( lt_target ).
 
 
