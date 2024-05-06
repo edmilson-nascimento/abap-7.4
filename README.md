@@ -11,7 +11,6 @@ Bem, depois de algum tempo, antes de avançar com qualquer ajuste, achei importa
 
 ```mermaid
 flowchart TD
-    
     Start((start)) --> DadosTeste[(Cenários de testes)]
     
     DadosTeste  --> Debug(Debug e avaliação de cenários)
