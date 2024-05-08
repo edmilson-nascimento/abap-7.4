@@ -1,4 +1,5 @@
 
+
 data(lt_filter) =
   " Atribuição do tipo TT_PRPS
   value tt_prps(
@@ -10,7 +11,6 @@ data(lt_filter) =
   group by ls_data-psphi ascending
   " Atribuir a variavel
     ( psphi = DP ) ) .
-
 
     data(lt_filter) =
       value re_t_aufnr(
