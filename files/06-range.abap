@@ -7,7 +7,6 @@
     return .
   endif .
 
-
   data(lt_range) =
     value fip_t_vbeln_range(
       for l in lt_data (
@@ -16,6 +15,7 @@
         low    = l-vbeln
       )
     ) .
+
 ***********************************************************************
 
   lt_range = value #(
@@ -38,7 +38,6 @@
           RETURN .
         ENDIF .
     
-*
     DATA(lr_equipament) = VALUE ranges_equnr(
       FOR GROUPS equipament OF l IN im_ativos
       WHERE ( equnr IS NOT INITIAL )
