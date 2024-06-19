@@ -57,5 +57,3 @@
     IF ( sy-subrc NE 0 ) .
       RETURN .
     ENDIF .
-
-    
