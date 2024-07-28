@@ -57,3 +57,13 @@
     IF ( sy-subrc NE 0 ) .
       RETURN .
     ENDIF .
+
+***********************************************************************
+lt_range = value #(
+  for groups vbeln of wa in lt_data
+    group by wa-vbeln ascending
+    without members
+      ( sign   = rsmds_c_sign-including
+        option = rsmds_c_option-equal
+*         low    = wa-vbeln  )  ) .
+        low    = vbeln  )  ) .
