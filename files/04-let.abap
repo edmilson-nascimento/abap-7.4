@@ -1,5 +1,3 @@
-report y_let .
-
 * Usando a mesma tabela interna para atribuor novos dados
 TYPES:
   BEGIN OF ty_result,
