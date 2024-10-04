@@ -28,13 +28,7 @@ DATA(lt_target) = CORRESPONDING tab_material( lt_source
 cl_demo_output=>display_data( lt_target ).
 
 
-
-
-
-
-
-
-
+*
 
 
 
