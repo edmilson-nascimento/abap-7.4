@@ -9,3 +9,41 @@ DATA(lv_lines) = REDUCE i(
     ( IF external_id_part = me->external_id(8)
       THEN count + 1
       ELSE count ) ).
+
+
+
+
+        TYPES:
+        "! <p class="shorttext synchronized" lang="PT">Estrutura de Documento financeiro</p>
+        BEGIN OF ty_SFLIGHT,
+          CARRID      TYPE SFLIGHT-CARRID,
+          CONNID      TYPE SFLIGHT-CONNID,
+          FLDATE      TYPE SFLIGHT-FLDATE,
+          PRICE      TYPE SFLIGHT-PRICE,
+          CURRENCY      TYPE SFLIGHT-CURRENCY,
+          PLANETYPE      TYPE SFLIGHT-PLANETYPE,
+        END OF ty_SFLIGHT,
+        tab_sorted TYPE sorted TABLE OF ty_SFLIGHT WITH DEFAULT KEY.
+      
+      BREAK-POINT.
+      
+      
+      SELECT * INTO TABLE @data(lt_data)
+        FROM SFLIGHT
+        up to 999 rows .
+      IF sy-subrc <> 0.
+        RETURN.
+      ENDIF.
+      
+                                   MAPPING numero_plr = sgtxt ).
+      
+      
+      DATA(lv_lines) = REDUCE i( 
+        INIT count = 0
+        FOR ls_data IN lt_data
+          ( count = count + 1 ) ).
+      *  data(lt_soted) =
+      
+      
+      
+      
