@@ -11,8 +11,6 @@ DATA(lv_lines) = REDUCE i(
       ELSE count ) ).
 
 
-
-
         TYPES:
         "! <p class="shorttext synchronized" lang="PT">Estrutura de Documento financeiro</p>
         BEGIN OF ty_SFLIGHT,
@@ -22,20 +20,21 @@ DATA(lv_lines) = REDUCE i(
           PRICE      TYPE SFLIGHT-PRICE,
           CURRENCY      TYPE SFLIGHT-CURRENCY,
           PLANETYPE      TYPE SFLIGHT-PLANETYPE,
+          count      TYPE i,
         END OF ty_SFLIGHT,
         tab_sorted TYPE sorted TABLE OF ty_SFLIGHT WITH DEFAULT KEY.
       
       BREAK-POINT.
       
       
-      SELECT * INTO TABLE @data(lt_data)
+      SELECT CARRID, CONNID, FLDATE, PRICE, CURRENCY, PLANETYPE
         FROM SFLIGHT
-        up to 999 rows .
+        up to 999 rows 
+        into table @data(lt_data).
       IF sy-subrc <> 0.
         RETURN.
       ENDIF.
       
-                                   MAPPING numero_plr = sgtxt ).
       
       
       DATA(lv_lines) = REDUCE i( 
@@ -43,7 +42,5 @@ DATA(lv_lines) = REDUCE i(
         FOR ls_data IN lt_data
           ( count = count + 1 ) ).
       *  data(lt_soted) =
-      
-      
       
       
