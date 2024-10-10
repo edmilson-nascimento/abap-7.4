@@ -10,7 +10,6 @@ DATA(lv_lines) = REDUCE i(
       THEN count + 1
       ELSE count ) ).
 
-
         TYPES:
         "! <p class="shorttext synchronized" lang="PT">Estrutura de Documento financeiro</p>
         BEGIN OF ty_SFLIGHT,
@@ -22,7 +21,7 @@ DATA(lv_lines) = REDUCE i(
           planetype TYPE sflight-planetype,
           count     TYPE i,
         END OF ty_SFLIGHT,
-        tab_sorted TYPE SORTED TABLE OF ty_SFLIGHT WITH DEFAULT KEY.
+        tab_sorted TYPE SORTED TABLE OF ty_SFLIGHT WITH NON-UNIQUE KEY CURRENCY.
       
       BREAK-POINT.
       
@@ -37,8 +36,8 @@ DATA(lv_lines) = REDUCE i(
       
       
       data(lt_group) = value tab_sorted(
-        for GROUPS currency_group of <line> in it_data
-      
+        for GROUPS currency_group of <line> in lt_data
+      group by <line>-currency ASCENDING
         ( currency = currency_group )
       
        ).
