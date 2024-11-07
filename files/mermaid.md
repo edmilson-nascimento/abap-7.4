@@ -1,5 +1,5 @@
 
-## Development test flow ##
+## Development flow ##
 Legend
 - PO - Process Order
 - Press F4 - Button to "NEXT" on the screen
