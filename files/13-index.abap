@@ -1,4 +1,5 @@
-*Define structure
+
+* Define structure
 TYPES:
   BEGIN OF ty_struct1,
     field1 TYPE i,
@@ -14,7 +15,7 @@ TYPES:
 TYPES:  gtt_struct1 TYPE STANDARD TABLE OF ty_struct1 WITH DEFAULT KEY,
         gtt_struct2 TYPE STANDARD TABLE OF ty_struct2 WITH DEFAULT KEY.
 
-        * Initialize source table with some random values
+* Initialize source table with some random values
 DATA(lt_source) = VALUE gtt_struct1(
     ( field1 = 1 field2 = 'A' )
     ( field1 = 2 field2 = 'B' ) ).
