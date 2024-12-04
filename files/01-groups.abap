@@ -19,7 +19,6 @@ data(lt_filter) =
         group by line-aufnr ascending
         ( order ) ) .
 
-
     me->gt_componentes = VALUE #(
       FOR GROUPS components OF <fs_mat> IN lt_data
       GROUP BY ( aufnr   = <fs_mat>-aufnr
