@@ -80,7 +80,6 @@ t_result = VALUE #( FOR GROUPS group OF ls_source IN it_source
                                                   FOR ls_member IN GROUP group
                                                   NEXT lv_liters = lv_liters + ls_member-liters ) ) ).
 
-
 TYPES:
   BEGIN OF type_line,
     matnr TYPE mara-matnr,
