@@ -1,3 +1,4 @@
+method split .
 
 TYPES:
   BEGIN OF line,
@@ -19,16 +20,15 @@ SELECT * UP TO 31100 ROWS
 WHILE lt_bseg IS NOT INITIAL.
   result = VALUE itab( BASE result
                        (
-*                      rows  = | { sy-index * 1000 }-{ sy-index * 1000 + 1000 } |
-                       rows  = | { sy-index * package }-{ sy-index * package + package } |
+                      rows  = | { sy-index * 1000 }-{ sy-index * 1000 + 1000 } |
                        slice = VALUE bseg_t( FOR wa IN lt_bseg INDEX INTO i FROM i + 1 TO i + 1
-*                                            ( LINES OF lt_bseg FROM i TO i + 999 ) )
-                                             ( LINES OF lt_bseg FROM i TO i + ( package - 1 ) ) )
+                                            ( LINES OF lt_bseg FROM i TO i + 999 ) )
                        )
                      ).
-* DELETE lt_bseg FROM 1 TO 1000.
-  DELETE lt_bseg FROM 1 TO package.
+ DELETE lt_bseg FROM 1 TO 1000.
 ENDWHILE.
+
+ENDMETHOD.
 
 BREAK-POINT.
 
