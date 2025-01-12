@@ -18,7 +18,11 @@ TYPES:  gtt_struct1 TYPE STANDARD TABLE OF ty_struct1 WITH DEFAULT KEY,
 * Initialize source table with some random values
 DATA(lt_source) = VALUE gtt_struct1(
     ( field1 = 1 field2 = 'A' )
-    ( field1 = 2 field2 = 'B' ) ).
+    ( field1 = 2 field2 = 'B' )
+    ( field1 = 2 field2 = 'C' )
+    ( field1 = 2 field2 = 'D' )
+    ( field1 = 2 field2 = 'E' )    
+    ).
 
 * Populate sy-tabix in the additional fields within the for loop
 DATA(lt_target2) = VALUE gtt_struct2( FOR lwa_source IN lt_source

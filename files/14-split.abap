@@ -1,47 +1,101 @@
-method split .
 
-TYPES:
-  BEGIN OF line,
-    rows  TYPE string,
-    slice TYPE bseg_t,
-  END OF line,
-  itab   TYPE STANDARD TABLE OF line WITH EMPTY KEY,
-  bseg_t TYPE STANDARD TABLE OF bseg WITH EMPTY KEY.
 
-DATA result TYPE itab.
-DATA package TYPE i VALUE 1000 .
+CLASS lcl_material DEFINITION CREATE PUBLIC.
 
-*Filling large table:
-SELECT * UP TO 31100 ROWS
-  INTO TABLE @DATA(lt_bseg)
-  FROM bseg.
-
-*Here we costruct table of tables which contains slices of the main table by 1000 rows each.
-WHILE lt_bseg IS NOT INITIAL.
-  result = VALUE itab( BASE result
-                       (
-                      rows  = | { sy-index * 1000 }-{ sy-index * 1000 + 1000 } |
-                       slice = VALUE bseg_t( FOR wa IN lt_bseg INDEX INTO i FROM i + 1 TO i + 1
-                                            ( LINES OF lt_bseg FROM i TO i + 999 ) )
-                       )
-                     ).
- DELETE lt_bseg FROM 1 TO 1000.
-ENDWHILE.
-
-ENDMETHOD.
-
-BREAK-POINT.
-
+  PUBLIC SECTION.
 
     TYPES:
-      BEGIN OF ty_st_kssk,
-        objek TYPE kssk-objek,
-        clint TYPE kssk-clint,
-        stdcl TYPE kssk-stdcl,
-      END OF ty_st_kssk,
-      tab_st_kssk TYPE STANDARD TABLE OF ty_st_kssk WITH DEFAULT KEY,
-      BEGIN OF ty_st_kssk_package,
-        item TYPE i,
-        data TYPE tab_st_kssk,
-      END OF ty_st_kssk_package,
-      tab_st_kssk_package TYPE STANDARD TABLE OF ty_st_kssk_package WITH DEFAULT KEY.
+      BEGIN OF ty_data,
+        material  TYPE bapimathead-material,
+        matl_desc TYPE bapi_makt-matl_desc,
+      END OF ty_data,
+      tab_data TYPE STANDARD TABLE OF ty_data WITH DEFAULT KEY.
+
+    METHODS constructor
+      IMPORTING im_material TYPE matnr
+                im_desc     TYPE makt-maktx.
+
+    METHODS change
+      RETURNING VALUE(result) TYPE bapiret2.
+
+  PRIVATE SECTION.
+
+    DATA:
+      gs_data        TYPE ty_data,
+      gs_header      TYPE bapimathead,
+      gt_description TYPE tt_bapi_makt.
+
+    METHODS fill.
+
+    METHODS bapi
+      RETURNING VALUE(result) TYPE bapiret2.
+
+ENDCLASS.
+
+CLASS lcl_material IMPLEMENTATION.
+
+  METHOD constructor.
+
+    me->gs_data = VALUE #( material  = im_material
+                           matl_desc = im_desc ).
+  ENDMETHOD.
+
+
+  METHOD change.
+
+    me->fill( ).
+
+    IF    me->gs_header               IS INITIAL
+       OR lines( me->gt_description )  = 0.
+      RETURN.
+    ENDIF.
+
+    result = me->bapi( ).
+
+  ENDMETHOD.
+
+
+  METHOD fill.
+
+    me->gs_header      = VALUE #( material = |{ me->gs_data-material ALPHA = OUT }| ).
+    me->gt_description = VALUE #( ( langu     = sy-langu
+                                    matl_desc = me->gs_data-matl_desc ) ).
+
+  ENDMETHOD.
+
+  METHOD bapi.
+
+    CALL FUNCTION 'BAPI_MATERIAL_SAVEDATA'
+      EXPORTING headdata            = me->gs_header
+      IMPORTING return              = result
+      TABLES    materialdescription = me->gt_description.
+
+  ENDMETHOD.
+
+ENDCLASS.
+
+
+
+INITIALIZATION .
+
+BREAK-POINT .
+
+  SELECT FROM makt
+    FIELDS matnr, maktx
+    WHERE spras = @sy-langu
+    INTO TABLE @DATA(lt_data)
+    UP TO 10 ROWS.
+
+  LOOP AT lt_data INTO DATA(ls_line).
+
+    DATA(ls_messasge) = NEW lcl_material( im_material = ls_line-matnr
+                                          im_desc     = ls_line-maktx
+    )->change( ).
+
+    WRITE / ls_messasge-message.
+
+  ENDLOOP.
+
+
+
+
