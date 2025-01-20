@@ -16,3 +16,27 @@ IF gv_ausp = abap_true.
       MESSAGE i000(>0) WITH 'Foram criados processos paralelos em jobs.'.
     ENDIF.
   ENDIF.
+
+
+  METHOD split_packages.
+
+    IF lines( im_data ) = 0.
+      RETURN.
+    ENDIF.
+
+    IF im_package IS INITIAL.
+      RETURN.
+    ENDIF.
+
+    DATA(lt_data_temp) = im_data.
+
+    WHILE lt_data_temp IS NOT INITIAL.
+      result = VALUE tab_st_kssk_package(
+                         BASE result
+                         ( item = sy-index
+                           data = VALUE tab_st_kssk( FOR wa IN lt_data_temp INDEX INTO i FROM i + 1 TO i + 1
+                                                     ( LINES OF lt_data_temp FROM i TO i + ( im_package - 1 ) ) ) ) ).
+      DELETE lt_data_temp FROM 1 TO im_package.
+    ENDWHILE.
+
+  ENDMETHOD.
