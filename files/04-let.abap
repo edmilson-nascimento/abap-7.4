@@ -52,6 +52,8 @@ cl_demo_output=>write_data( result1 ).
 * Display
 cl_demo_output=>display( ).
 
+* Expected result
+
 * Populate sy-tabix in the additional fields within the for loop
 DATA(lt_target2) = VALUE gtt_struct2( FOR lwa_source IN lt_source
                             INDEX INTO index
