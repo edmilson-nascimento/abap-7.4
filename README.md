@@ -7,9 +7,9 @@
 ![Issues](https://img.shields.io/github/issues/edmilson-nascimento/abap-7.4)
 ![Stars](https://img.shields.io/github/stars/edmilson-nascimento/abap-7.4)
 
-The are annotations about new features and 'new' ways to do something better. ~~I hope it.~~
+There are annotations about new features and 'new' ways to do something better. ~~I hope it.~~
 
-Eu ainda não decidi ao certo se vou colocar isso em ingles ou português ~~e por enquanto estai indo de acordo com meu humor do dia~~.
+Eu ainda não decidi ao certo se vou colocar isso em inglês ou português ~~e por enquanto estai indo de acordo com meu humor do dia~~.
 
 ## Dica
 Bem, depois de algum tempo, antes de avançar com qualquer ajuste, achei importante deixar um ponto de atenção para se pensar.
