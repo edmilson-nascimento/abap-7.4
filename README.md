@@ -1,6 +1,11 @@
 # ABAP 7.4 / inline #
 ![Static Badge](https://img.shields.io/badge/development-abap-blue)
 ![GitHub commit activity (branch)](https://img.shields.io/github/commit-activity/t/edmilson-nascimento/abap-7.4)
+![ABAP](https://img.shields.io/badge/language-ABAP-blue)
+![SAP](https://img.shields.io/badge/platform-SAP-blue)
+![License](https://img.shields.io/github/license/edmilson-nascimento/abap-7.4)
+![Issues](https://img.shields.io/github/issues/edmilson-nascimento/abap-7.4)
+![Stars](https://img.shields.io/github/stars/edmilson-nascimento/abap-7.4)
 
 The are annotations about new features and 'new' ways to do something better. ~~I hope it.~~
 
