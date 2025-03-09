@@ -1,5 +1,4 @@
 
-
 TYPES:
   BEGIN OF ts_knbk,
     kunnr TYPE knbk-kunnr,
