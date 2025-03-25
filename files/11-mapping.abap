@@ -68,18 +68,4 @@ LOOP AT im_data into data(ls_item).
 ENDLOOP.
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 *

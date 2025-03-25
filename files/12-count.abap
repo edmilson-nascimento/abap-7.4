@@ -20,7 +20,6 @@ IF sy-subrc <> 0.
   RETURN.
 ENDIF.
 
-
 DATA(lt_group) = VALUE tab_sorted( FOR GROUPS currency_group OF <line> IN lt_data
                                    GROUP BY <line>-currency ASCENDING
                                    ( currency = currency_group
