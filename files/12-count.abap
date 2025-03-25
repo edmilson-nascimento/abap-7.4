@@ -12,9 +12,6 @@ TYPES:
   END OF ty_SFLIGHT,
   tab_sorted TYPE SORTED TABLE OF ty_SFLIGHT WITH NON-UNIQUE KEY currency.
 
-BREAK-POINT.
-
-
 SELECT carrid, connid, fldate, price, currency, planetype
   FROM sflight
   UP TO 999 ROWS
@@ -30,7 +27,3 @@ DATA(lt_group) = VALUE tab_sorted( FOR GROUPS currency_group OF <line> IN lt_dat
                                      count    = REDUCE #(
                                         INIT int TYPE i FOR <group> IN lt_group
                                         NEXT int = int + 1 ) ) ).
-
-
-
-

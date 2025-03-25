@@ -1,4 +1,3 @@
-
 " Em caso de grandes quantidades, essa classe será chamada novamente, para um segundo
 " processamento feito em pacotes de tamanhos diferentes
 IF     me->is_second_step( me->gv_second ) = abap_true
