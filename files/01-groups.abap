@@ -106,7 +106,6 @@ WITHOUT MEMBERS
            ( matnr = group-matnr
              charg = group-charg ) ) .
 
-
 * Agrupamento para totalizador
 DATA(lv_count_materials) = REDUCE I( INIT CNT1 = 0
 FOR GROUPS OF M1 IN me->gt_goodsmvt_item GROUP BY M1-material
