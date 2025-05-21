@@ -1,11 +1,17 @@
 # ABAP 7.4 / inline #
-![Static Badge](https://img.shields.io/badge/development-abap-blue)
-![GitHub commit activity (branch)](https://img.shields.io/github/commit-activity/t/edmilson-nascimento/abap-7.4)
-![ABAP](https://img.shields.io/badge/language-ABAP-blue)
-![SAP](https://img.shields.io/badge/platform-SAP-blue)
-![License](https://img.shields.io/github/license/edmilson-nascimento/abap-7.4)
-![Issues](https://img.shields.io/github/issues/edmilson-nascimento/abap-7.4)
-![Stars](https://img.shields.io/github/stars/edmilson-nascimento/abap-7.4)
+![ABAP](https://img.shields.io/badge/ABAP-7.4-blue?style=flat&logo=sap)
+![SAP](https://img.shields.io/badge/SAP-ECC%206.0-blue?style=flat&logo=sap)
+![S/4HANA](https://img.shields.io/badge/S%2F4HANA-2023-blue?style=flat&logo=sap)
+![SAP](https://img.shields.io/badge/SAP-On%20Premise-blue?style=flat&logo=sap)
+![ABAP OO](https://img.shields.io/badge/ABAP-Object%20Oriented-orange?style=flat&logo=sap)
+![Development](https://img.shields.io/badge/Development-ABAP-brightgreen?style=flat&logo=sap)
+
+![GitHub](https://img.shields.io/badge/GitHub-Repository-black?style=flat&logo=github)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/m/edmilson-nascimento/abap-7.4?style=flat)
+![GitHub last commit](https://img.shields.io/github/last-commit/edmilson-nascimento/abap-7.4?style=flat)
+![GitHub issues](https://img.shields.io/github/issues/edmilson-nascimento/abap-7.4?style=flat)
+![GitHub stars](https://img.shields.io/github/stars/edmilson-nascimento/abap-7.4?style=flat)
+![License](https://img.shields.io/github/license/edmilson-nascimento/abap-7.4?style=flat)
 
 There are annotations about new features and 'new' ways to do something better. ~~I hope it.~~
 
