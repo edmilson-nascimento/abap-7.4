@@ -1,0 +1,26 @@
+{
+  "rules": {
+    "ABAP": {
+      "maxLineLength": 80,
+      "maxLines": 200,
+      "requireSemicolons": true,
+      "requireEndOfStatement": true,
+      "noUnusedVariables": true,
+      "noUnusedMethods": true,
+      "noTrailingWhitespace": true,
+      "noEmptyLines": {
+        "max": 1
+      },
+      "requireDocumentation": {
+        "enabled": true,
+        "minLines": 1
+      }
+    }
+  },
+  "exclude": [
+    "src/utils/zcl_utils.abap"
+  ],
+  "include": [
+    "src/**/*.abap"
+  ]
+}

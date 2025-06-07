@@ -1,0 +1,13 @@
+{
+  "name": "abap-examples",
+  "version": "1.0.0",
+  "description": "A collection of ABAP examples demonstrating various programming concepts.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Your Name",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {}
+}
