@@ -41,39 +41,62 @@ flowchart TD
 This repository covers the following ABAP 7.4+ features:
 
 ### Groups in ABAP
-One of the most powerful features in modern ABAP is the `GROUPS` functionality. While it can be challenging to master, it provides elegant solutions for data aggregation. See the [example implementation](/files/01-groups.abap).
+One of the most powerful features in modern ABAP is the `GROUPS` functionality, enabling efficient data grouping and aggregation. [See examples](/files/01-groups.abap)
 
-### Alternative to COLLECT using REDUCE
-While `COLLECT` is a traditional ABAP command, modern ABAP offers more readable alternatives using `REDUCE`. The example demonstrates how to:
-1. Query a table using multiple filter values
-2. Return all matching records
-3. Identify which entries contain all specified filter fields
+```abap
+DATA(lt_filter) = VALUE tt_prps(
+  FOR GROUPS DP OF ls_data IN lt_pstab
+  WHERE ( psphi IS NOT INITIAL )
+  GROUP BY ls_data-psphi ASCENDING
+  ( psphi = DP ) ).
+```
 
-See the [complete implementation](/files/02-collect.abap) for both approaches.
+### COLLECT and REDUCE Operations
+Modern alternatives to traditional COLLECT using REDUCE. [See examples](/files/02-collect.abap)
 
-### Date Handling
-Modern date conversion and formatting techniques. Various approaches for different output formats are demonstrated in the [date examples](/files/03-date.abap).
+### Date Formatting
+Modern date conversion and formatting techniques:
+```abap
+ls_out-date_creation = |{ ls_att-crdat DATE = USER }|.
+ls_out-time_creation = |{ ls_att-crtim TIME = ISO }|.
+```
+[See more examples](/files/03-date.abap)
 
-### LET Expressions
-Using `LET` expressions for improved code readability and maintainability. [See examples](/files/04-let.abap)
+### LET Expressions 
+Using LET for improved code readability. [See examples](/files/04-let.abap)
 
-### Modern Loop Constructs
-Efficient ways to handle iterations in modern ABAP. [See examples](/files/05-loop.abap)
+### Loop Constructs
+Modern loop patterns and best practices. [See examples](/files/05-loop.abap)
 
 ### Range Operations
-Simplified range handling and operations. [See examples](/files/06-range.abap)
+Simplified range handling. [See examples](/files/06-range.abap)
 
 ### REDUCE Operations
-Advanced use of `REDUCE` for data aggregation. [See examples](/files/07-reduce.abap)
+Data aggregation using REDUCE. [See examples](/files/07-reduce.abap)
 
-### String Operations with REDUCE
-Text processing using modern ABAP features. [See examples](/files/08-reduce_string.abap)
+### String Operations
+Text processing with modern ABAP. [See examples](/files/08-reduce_string.abap)
 
-### Timestamp Handling
-Modern approaches to timestamp operations. [See examples](/files/09-timestamp.abap)
+### Timestamp Operations
+Modern timestamp handling. [See examples](/files/09-timestamp.abap)
 
-### Table Comparison
-Efficient methods to compare and find differences between tables. [See examples](/files/10-diff-sorted.abap)
+### Sorted Table Operations
+Working with sorted tables efficiently. [See examples](/files/10-diff-sorted.abap)
 
 ### Field Mapping
-Solutions for mapping fields between tables with different structures. [See examples](/files/11-mapping.abap)
+Advanced field mapping techniques. [See examples](/files/11-mapping.abap)
+
+### Counting Operations
+Efficient counting in tables. [See examples](/files/12-count.abap)
+
+### Index Operations
+Working with table indices. [See examples](/files/13-index.abap)
+
+### Split Operations
+Modern string and table splitting. [See examples](/files/14-split.abap)
+
+### Package Processing
+Handling large data sets in packages. [See examples](/files/15-package.abap)
+
+### Base Table Operations
+Working with base tables and modifications. [See examples](/files/16-base.abap)
