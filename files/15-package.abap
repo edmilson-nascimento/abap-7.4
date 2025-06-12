@@ -16,6 +16,7 @@ ELSE.
 ENDIF.
 
 
+  PRIVATE SECTION.
 
     DATA:
       gt_filter      TYPE tab_st_kssk,
@@ -30,6 +31,14 @@ ENDIF.
                 im_data_kssk TYPE tab_st_klah OPTIONAL
                 im_package   TYPE i
       EXPORTING !ex_task     TYPE STANDARD TABLE.
+
+    METHODS process
+      IMPORTING im_process_mode     TYPE char01
+                im_single_task_ausp TYPE tab_st_kssk_package OPTIONAL
+                im_single_task_kssk TYPE tab_st_klah_package OPTIONAL
+      EXPORTING ex_ausp             TYPE tab_ausp
+                ex_kssk             TYPE tab_st_kssk.
+
 
 
 
