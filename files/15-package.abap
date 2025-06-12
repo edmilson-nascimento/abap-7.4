@@ -16,6 +16,26 @@ ELSE.
 ENDIF.
 
 
+
+      BEGIN OF single_record_ausp,
+        klart TYPE ausp-klart,
+        data  TYPE tab_st_kssk,
+      END OF single_record_ausp,
+
+      BEGIN OF task_result_ausp,
+        data TYPE tab_ausp,
+      END OF task_result_ausp,
+
+      BEGIN OF record_kssk,
+        class_type TYPE kssk-klart,
+        filter     TYPE tab_st_klah,
+      END OF record_kssk,
+      single_record_kssk TYPE record_kssk,
+
+      BEGIN OF task_result_kssk,
+        data TYPE tab_st_kssk,
+      END OF task_result_kssk.
+
   PRIVATE SECTION.
 
     DATA:
