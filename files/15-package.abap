@@ -53,7 +53,6 @@ ENDIF.
       END OF ty_st_klah_package,
       tab_st_klah_package TYPE STANDARD TABLE OF ty_st_klah_package WITH DEFAULT KEY,
 
-      
       BEGIN OF single_record_ausp,
         klart TYPE ausp-klart,
         data  TYPE tab_st_kssk,
