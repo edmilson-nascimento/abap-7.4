@@ -16,7 +16,44 @@ ELSE.
 ENDIF.
 
 
+  PUBLIC SECTION.
 
+    CONSTANTS:
+      BEGIN OF gc_process_mode,
+        ausp TYPE char1 VALUE '1',
+        kssk TYPE char1 VALUE '2',
+      END OF gc_process_mode.
+
+    TYPES:
+      BEGIN OF ty_st_kssk,
+        objek TYPE kssk-objek,
+        clint TYPE kssk-clint,
+        stdcl TYPE kssk-stdcl,
+      END OF ty_st_kssk,
+      tab_st_kssk TYPE STANDARD TABLE OF ty_st_kssk WITH DEFAULT KEY,
+
+      BEGIN OF ty_st_kssk_package,
+        item TYPE numc4,
+        data TYPE tab_st_kssk,
+      END OF ty_st_kssk_package,
+      tab_st_kssk_package TYPE STANDARD TABLE OF ty_st_kssk_package WITH DEFAULT KEY,
+
+      BEGIN OF ty_st_klah,
+        klah_clint TYPE klah-clint,
+        klart      TYPE klah-klart,
+        class      TYPE klah-class,
+        imerk      TYPE ksml-imerk,
+      END OF ty_st_klah,
+      tab_st_klah TYPE STANDARD TABLE OF ty_st_klah WITH DEFAULT KEY,
+
+      BEGIN OF ty_st_klah_package,
+        item       TYPE numc4,
+        class_type TYPE kssk-klart,
+        data       TYPE tab_st_klah,
+      END OF ty_st_klah_package,
+      tab_st_klah_package TYPE STANDARD TABLE OF ty_st_klah_package WITH DEFAULT KEY,
+
+      
       BEGIN OF single_record_ausp,
         klart TYPE ausp-klart,
         data  TYPE tab_st_kssk,
