@@ -16,6 +16,23 @@ ELSE.
 ENDIF.
 
 
+
+    DATA:
+      gt_filter      TYPE tab_st_kssk,
+      ausp_filter TYPE single_record_ausp.
+
+    "! <p class="shorttext synchronized" lang="pt">Divide a tabela interna em pacotes</p>
+    "! @parameter im_package | <p class="shorttext synchronized" lang="pt">Quantidade por pacotes</p>
+    "! @parameter result     | <p class="shorttext synchronized" lang="pt">Pacotes dividos</p>
+    "! @parameter im_data    | <p class="shorttext synchronized" lang="pt">Dados completos</p>
+    METHODS split_packages
+      IMPORTING im_data_ausp TYPE tab_st_kssk OPTIONAL
+                im_data_kssk TYPE tab_st_klah OPTIONAL
+                im_package   TYPE i
+      EXPORTING !ex_task     TYPE STANDARD TABLE.
+
+
+
 METHOD split_packages.
 
     IF lines( im_data ) = 0.
