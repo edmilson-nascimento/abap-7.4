@@ -26,6 +26,7 @@ DATA(result1) = VALUE tab_result(
     ccode = '2001'
     uname = 'ABAP.DEV5' )
 ).
+
 " Write stated data
 cl_demo_output=>write_data( result1 ).
 
