@@ -25,7 +25,6 @@
       return .
     endif .
 
-
     select vbeln, posnr, charg, lfimg, meins, aufnr
       from lips
      where charg eq @is_data-charg
